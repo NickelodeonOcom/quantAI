@@ -57,6 +57,7 @@ def fetch_spot_and_vol(ticker, hist_days=252):
     else:
         sample = logrets
     sigma = float(sample.std(ddof=1) * sqrt(252))  # annualize
+    
     return spot, sigma
 
 def parse_time_to_maturity(maturity_date=None, years=None):
